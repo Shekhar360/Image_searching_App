@@ -1,0 +1,139 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the sign-up form */
+.signup-container {
+    background-color: #222;
+    /* Dark background for the form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+/* Form heading */
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #E46A68;
+    /* Text color matching the theme */
+}
+
+/* Styling for input fields */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: white;
+    /* White label text */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #E46A68;
+    /* Border color matching the theme */
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    /* White text for input fields */
+    background-color: #333;
+    /* Dark background for input fields */
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #E46A68;
+    /* Highlight border color on focus */
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #E46A68;
+    /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d15a59;
+    /* Darker shade of button on hover */
+}
+
+/* Styling for hyperlinks */
+a {
+    color: #E46A68;
+    /* Link color matching the theme */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+p {
+    margin-top: 20px;
+    color: white;
+    /* White text for the paragraph */
+}
+
+.toast {
+    position: absolute;
+    top: 1.5rem;
+    text-align: center;
+    width: 25rem;
+    margin: .1rem;
+    padding: 1rem 0;
+    border-radius: .5rem;
+    color: #eee;
+    display: block;
+}
+
+.info {
+    background-color: #4a6b9d;
+}
+
+.error {
+    background-color: #8c5b47;
+}
+
+.warning {
+    background-color: #c19a53;
+}
+
+.success {
+    background-color: #5c9a8d;
+}

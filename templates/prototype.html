@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype | WEB |</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            width:100%;
+            height:100vh;
+            display:flex;
+            /* justify-content:space-evenly;
+            align-items:center; */
+            /* flex-wrap:wrap; */
+            flex-direction:column;
+        }
+        .main{
+            display:flex;
+            width:100%;
+            justify-content:space-evenly;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+        .container{
+            border:2px solid black;
+            width:300px;
+            /* height:300px; */
+            /* overflow:hidden; */
+        }
+        .img{
+            overflow:hidden;
+            /* border:3px solid red; */
+        } 
+        .img img{
+            width:100%;
+            height:250px;
+            transition:0.3s;
+        }
+        .img img:hover{
+            transform:scale(1.2);
+            transition:0.3s;
+        }
+        .container p{
+            padding:20px;
+            text-align:center;
+            color:grey;
+        }
+        .btn{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="img">
+                <a id="link" target="_blank"><img src="testimage.jpg" id="image"></a>
+            </div>
+            <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="container">
+            <div class="img">
+                <img src="car.png">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="container">
+            <div class="img">
+                <img src="waifu.jpg">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    <div class="btn">
+        <button>Show More</button>
+    </div>
+    <script>
+        let cont = document.getElementById('image');
+        let para = document.getElementById('para');
+        let link = document.getElementById('link');
+        fetch('https://api.unsplash.com/search/photos?query=cat&page=1&content_filter=high&client_id=EhMb4jfSytIXeTlKmECa8Gks8qy8pxL2Ddt8LUiK55c')
+        .then(response => response.json())
+        .then(result => {
+            link.setAttribute('href', result['results'][2]['urls']['full'])
+            cont.setAttribute('src',result['results'][2]['urls']['raw']);
+            para.textContent = result['results'][2]['alt_description'];
+            console.log(result['results'][2]['urls']['raw']);
+            console.log(result);
+        });
+    </script>
+
+</body>
+</html>

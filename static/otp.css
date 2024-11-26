@@ -1,0 +1,94 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     font-family: Arial, sans-serif;
+     background-color: #222;
+     /* Dark background */
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+ }
+
+ .container {
+     background-color: #333;
+     padding: 30px;
+     border-radius: 10px;
+     width: 300px;
+     text-align: center;
+ }
+
+ h2 {
+     color: #4a6b9d;
+     /* Dark Blue */
+     margin-bottom: 20px;
+ }
+
+ label {
+     font-size: 16px;
+     margin-bottom: 10px;
+     display: block;
+ }
+
+ input[type="text"] {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 20px;
+     background-color: #444;
+     color: white;
+     border-radius: 5px;
+     outline: none;
+     font-size: 16px;
+     
+ }
+
+ button {
+     width: 100%;
+     padding: 12px;
+     background-color: #8c5b47;
+     /* Dark Peach */
+     color: white;
+     border: none;
+     border-radius: 5px;
+     font-size: 16px;
+     cursor: pointer;
+ }
+
+ button:hover {
+     background-color: #704134;
+     /* Darker Peach on Hover */
+ }
+
+ p {
+     color: #c19a53;
+     /* Dark Gold */
+     margin-top: 10px;
+ }
+
+ .error {
+     color: red;
+     margin-top: 20px;
+ }
+
+ a {
+     width: 5rem;
+     text-align: center;
+     padding: .65rem 0;
+     display: inline-block;
+     margin-top: 1rem;
+     width: 100%;
+     border-radius: .3rem;
+     color: #eee;
+     background-color: #E46A68;
+     text-decoration: none;
+
+     &:visited {
+         color: #eee;
+
+     }
+ }
