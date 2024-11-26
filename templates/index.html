@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <title>Image Searching App | WEB |</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class=" {{ message.tags }} toast">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <header>
+        <button><a href="{% url "logout" %}">Logout</a></button>
+    </header>
+
+    <div class="searchbar">
+        <input type="text" placeholder="Search Here" id="search">
+        <button id="searchButton">Search</button>
+    </div><br><br>
+    <div class="main">
+
+    </div>
+    <div class="showmorefooter">
+        <button id="showMore">Show More</button>
+    </div>
+
+    <script src="{% static 'app.js' %}"></script>
+    <script src="{% static 'toast.js' %}"></script>
+</body>
+
+</html>
